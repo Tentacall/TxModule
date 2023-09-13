@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include "gy87.h"
+#include "driver/gpio.h"
 
-void func(void)
-{
+void func(void){
 
 }
