@@ -5,7 +5,11 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${HOME}/esp/esp-idf/components/**",
-                "${HOME}/esp/esp-idf/components/freertos/**"
+                "${HOME}/esp/esp-idf/components/freertos/**",
+                "${HOME}/esp/esp-idf/components/driver/**",
+                "${HOME}/esp/esp-idf/components/xtensa/**",
+                "./components/I2Cdev/**",
+                "./components/MPU6050/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

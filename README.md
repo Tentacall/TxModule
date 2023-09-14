@@ -15,3 +15,9 @@
 - 
 
 ---
+### Configuration
+- Freq : `240Hz`
+- Flash : `4Mb`
+- I2C_SCL : `GPIO_22`
+- I2C_SDA : `GPIO_21`
+- I2C_Freq : `100000`
