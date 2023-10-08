@@ -11,6 +11,7 @@ void mpu6050(void *pvParameters);
 
 void app_main(void)
 {
+    // starting I2C condig
     i2c_config_t conf;
     conf.mode = I2C_MODE_MASTER;
     conf.sda_io_num = (gpio_num_t)CONFIG_GPIO_SDA;
