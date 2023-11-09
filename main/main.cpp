@@ -1,13 +1,15 @@
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_log.h"
-#include <driver/i2c.h>
+// #include "freertos/FreeRTOS.h"
+// #include "freertos/task.h"
+#include "mpu6050.h"
 
 extern "C" {
 	void app_main(void);
 }
 
+mpu6050_data_t mpu6050_data;
+
 void mpu6050(void *pvParameters);
+void printer(void *pvParameters);
 
 void app_main(void)
 {
@@ -23,5 +25,6 @@ void app_main(void)
     ESP_ERROR_CHECK(i2c_driver_install(I2C_NUM_0, I2C_MODE_MASTER, 0, 0, 0));
 
 	vTaskDelay(500/portTICK_PERIOD_MS);
-	xTaskCreate(&mpu6050, "IMU", 1024*8, NULL, 5, NULL);
+	xTaskCreate(&mpu6050, "IMU", 1024*8, &mpu6050_data, 5, NULL);
+    xTaskCreate(&printer, "printer", 1024*8, &mpu6050_data, 5, NULL);
 }

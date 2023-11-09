@@ -21,3 +21,10 @@
 - I2C_SCL : `GPIO_22`
 - I2C_SDA : `GPIO_21`
 - I2C_Freq : `100000`
+
+---
+### How to run ? 
+- activate idf environment
+- `get-idf` (create alise for `. ~/esp/esp-idf/export.sh`)
+- `idf.py build`
+- `idf.py -p /dev/ttyUSB0 flash monitor`
