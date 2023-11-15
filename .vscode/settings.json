@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "cstdint": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "*.tcc": "cpp",
+        "filesystem": "cpp"
     }
 }

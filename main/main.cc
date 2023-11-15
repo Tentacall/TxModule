@@ -10,6 +10,7 @@ mpu6050_data_t mpu6050_data;
 
 void mpu6050(void *pvParameters);
 void printer(void *pvParameters);
+void controller(void *pvParameters);
 
 void app_main(void)
 {
@@ -27,4 +28,5 @@ void app_main(void)
 	vTaskDelay(500/portTICK_PERIOD_MS);
 	xTaskCreate(&mpu6050, "IMU", 1024*8, &mpu6050_data, 5, NULL);
     xTaskCreate(&printer, "printer", 1024*8, &mpu6050_data, 5, NULL);
+    xTaskCreate(&controller, "controller", 1024*8, &mpu6050_data, 5, NULL);
 }
