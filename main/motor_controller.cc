@@ -1,5 +1,6 @@
 #include "iot_servo.h"
 #include "mpu6050.h"
+#include "pid.h"
 
 servo_config_t servo_config = {
     .max_angle = 180,               // Maximum angle of the servo
